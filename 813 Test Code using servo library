@@ -1,0 +1,13 @@
+#Test Code checking the Servo Library is working
+
+from servo import Servo
+import time
+
+servo = Servo(pin=0)  #To be changed according to the pin used
+
+servo.move(0)  # turns to 0°.
+time.sleep(1)
+servo.move(90)  # turns to 90°.
+time.sleep(1)
+servo.move(180)  # turns to 180°.
+time.sleep(1)
