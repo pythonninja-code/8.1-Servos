@@ -1,0 +1,15 @@
+#use of PWM to move a 180 degree servo
+
+from machine import Pin
+from machine import PWM
+import time
+
+servo_pin = Pin(0, Pin.OUT) #Links the servo to pin GP0
+servo = PWM(servo_pin)
+servo.freq (50) #Set PWM frequency
+
+#commands
+servo.duty_u16(3277) #Servo at 0 degrees
+time.sleep(1)      
+servo.duty_u16(6553) #Servo at 180 degrees
+time.sleep(1)       
